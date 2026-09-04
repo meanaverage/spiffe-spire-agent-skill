@@ -42,6 +42,14 @@ See [`references/source-hierarchy.md`](references/source-hierarchy.md) and [`ACK
 - [`references/workflows.md`](references/workflows.md) — review, debugging, upgrade, and assurance ladders
 - [`references/version-baseline.md`](references/version-baseline.md) — included example baseline
 
+## Evaluation corpus
+
+The repository includes [`evals/`](evals/) with versioned reasoning scenarios and a scoring rubric. These tests do not execute SPIRE; they measure whether an agent reaches the correct conclusion, chooses the correct authority/version, respects the SPIFFE/SPIRE versus application-policy boundary, and avoids unsupported security claims.
+
+The initial corpus covers join-token reuse, attestor-specific re-attestation, UID selector behavior, SVID/bundle rotation, authentication-versus-authorization, relying-party evidence, health/readiness, and unknown-version discipline.
+
+The corpus is intentionally separate from future real-world confirmed/rejected defect cases so the upstream-derived baseline remains stable.
+
 ## Initial reference baseline
 
 The current examples were assembled against:
