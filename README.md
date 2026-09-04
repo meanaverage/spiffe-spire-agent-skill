@@ -21,6 +21,23 @@ The run contained **288 primary and 72 development-regression target responses**
 
 [Full evaluation methodology, configurations, scoring, validation, and limitations →](docs/evaluation.md)
 
+### Independent evaluation
+
+This skill is one system evaluated by the implementation-neutral
+[spiffe-spire-agent-evals](https://github.com/meanaverage/spiffe-spire-agent-evals)
+project. The benchmark can also evaluate other skills, prompts, agents,
+generic guidance, and no-guidance baselines; using this skill is not required.
+
+The frozen 2026-09-04 result applies only to the exact tested skill-content
+packet, target configurations, corpus, graders, and methodology recorded in
+the result manifest. The harness placed `SKILL.md` and every Markdown reference
+into each prompt, so native skill discovery and progressive disclosure were
+not tested. The result is not a security certification or a claim of general
+model superiority.
+
+See the [independent corpus and v0.1.0 release](https://github.com/meanaverage/spiffe-spire-agent-evals/releases/tag/v0.1.0)
+for the methodology, limitations, provenance, and immutable result manifest.
+
 ## What this skill is for
 
 - SPIFFE/SPIRE architecture and implementation review
@@ -67,7 +84,10 @@ The repository includes [`evals/`](evals/) with versioned reasoning scenarios an
 
 The public baseline contains eight upstream/specification and bounded-derived scenarios covering join-token reuse, attestor-specific re-attestation, UID selection, rotation, authentication-versus-authorization, relying-party evidence, readiness, and unknown-version discipline. A separate three-case development-regression corpus contains product-neutral scenarios generalized from independently adjudicated private integration review.
 
-A separate implementation-neutral evaluation repository is planned so public benchmark ground truth and future unreleased holdouts do not become part of the runtime skill surface.
+Public regression cases and frozen results are maintained by the independent
+[spiffe-spire-agent-evals](https://github.com/meanaverage/spiffe-spire-agent-evals)
+project. Future unreleased holdouts must be governed outside public GitHub and
+outside this runtime skill surface.
 
 ## Initial reference baseline
 
