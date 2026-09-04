@@ -81,6 +81,6 @@ For security-relevant findings report:
 5. smallest safe correction;
 6. what remains unproven.
 
-For security findings, state the boundary-specific evidence threshold and distinguish **suspicion**, **invariant violation**, **exploitability**, and **demonstrated bypass**.
+For security findings, state the boundary-specific evidence threshold and choose the claim strength last. A label must not assert a prerequisite the same review calls missing or unproven; missing reachability or effect evidence caps escalation but does not erase an established invariant violation. Use `references/reviewer-discrimination-rules.md` for the evidence gates.
 
 Distinguish observed fact from inference. Do not transfer evidence between source revisions, binaries, configurations, or versions without an explicit equivalence argument.

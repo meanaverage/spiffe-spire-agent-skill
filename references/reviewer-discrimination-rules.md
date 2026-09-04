@@ -88,11 +88,15 @@ Before reporting, enumerate the authority digest preimage, version fields, mutat
 
 ## Claim-strength vocabulary
 
-Use calibrated conclusions:
+Choose the conclusion after recording observed and missing evidence:
 
-- **Suspected:** the pattern is plausible but discriminating evidence is incomplete.
-- **Invariant violation established:** the owning security property is shown to fail.
-- **Exploitability unproven/established:** evaluate reachability, actor control, and consequence separately.
-- **Demonstrated bypass:** a reproducible trace/test shows the failed property producing a protected effect that should have been denied.
+| Conclusion | Evidence gate |
+|---|---|
+| **Suspected** | A property failure is plausible, but discriminating evidence is incomplete. |
+| **Invariant violation** | Evidence establishes failure of the security property at its owning boundary. |
+| **Exploitable** | The invariant violation, plausible actor reach/control, and a meaningful security consequence are established. |
+| **Demonstrated bypass** | A concrete reachable path, required actor/control condition, protected effect, and evidence that the effect should have been denied are established. |
 
-Failure to demonstrate exploitation does not erase an established invariant violation; an invariant violation does not by itself prove exploitation.
+Apply two consistency checks. A label MUST NOT assert an evidence element that the review narrative calls missing or unproven. Conversely, missing reachability or exploitation evidence MUST NOT reduce an established invariant violation to suspected or non-finding. When dispositive facts refute the alleged property failure, report a non-finding and state what changed fact would reopen it.
+
+Skill guidance selects questions and evidence; it is not itself evidence. Cite the applicable specification, exact-version source/tests, integration path, or runtime observation instead.
