@@ -34,6 +34,8 @@ Load only the reference needed for the task:
 - X.509-SVID/bundle refresh and trust rotation → `references/rotation-and-bundles.md`
 - Workload API clients and SPIFFE-aware mTLS → `references/workload-api-and-mtls.md`
 - incident classification → `references/failure-taxonomy.md`
+- application-authorization security invariants → `references/security-review-invariants.md`
+- adjudicating plausible findings and false positives → `references/reviewer-discrimination-rules.md`
 - finding exact tagged upstream evidence → `references/upstream-oracle-navigation.md`
 - included example versions → `references/version-baseline.md`
 
@@ -78,5 +80,7 @@ For security-relevant findings report:
 4. failed boundary or security consequence;
 5. smallest safe correction;
 6. what remains unproven.
+
+For security findings, state the boundary-specific evidence threshold and distinguish **suspicion**, **invariant violation**, **exploitability**, and **demonstrated bypass**.
 
 Distinguish observed fact from inference. Do not transfer evidence between source revisions, binaries, configurations, or versions without an explicit equivalence argument.
