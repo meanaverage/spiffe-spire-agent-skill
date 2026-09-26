@@ -89,6 +89,13 @@ Public regression cases and frozen results are maintained by the independent
 project. Future unreleased holdouts must be governed outside public GitHub and
 outside this runtime skill surface.
 
+CI runs the same dependency-free self-checks you can run locally:
+
+```sh
+python3 evals/validate.py      # corpus schema, required fields, unique scenario ids
+python3 tools/check_skill.py   # SKILL.md frontmatter, reference coverage, relative links
+```
+
 ## Initial reference baseline
 
 The current examples were assembled against:
